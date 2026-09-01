@@ -1,0 +1,39 @@
+{
+  "name": "cabcomptable-backend",
+  "version": "1.0.0",
+  "description": "API plateforme cabinet comptable",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --dns-result-order=ipv4first server.js",
+    "dev": "nodemon --exec \"node --dns-result-order=ipv4first server.js\"",
+    "seed": "node src/utils/seed.js",
+    "migrate:firebase": "node src/utils/migrateToFirestore.js"
+  },
+  "keywords": [
+    "cabinet",
+    "comptable",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.2",
+    "firebase-admin": "^14.3.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.11.0",
+    "multer": "^2.2.0",
+    "nodemailer": "^9.0.5",
+    "uuid": "^9.0.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

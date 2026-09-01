@@ -1,0 +1,975 @@
+{
+  "users": [
+    {
+      "id": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "firstName": "Moussa",
+      "lastName": "Traoré",
+      "email": "comptable@cabcomptable.ml",
+      "phone": "+22370000002",
+      "passwordHash": "$2b$10$MHg/o6ZQ7QrdkfiXilYc4.GuQV9gu1p4.RQL2QtDEGlTHvFdjMV7q",
+      "role": "accountant",
+      "emailVerified": true,
+      "status": "active",
+      "companyId": null,
+      "preferences": {
+        "emailNotifications": true
+      },
+      "createdAt": "2026-08-25T16:15:12.186Z",
+      "updatedAt": "2026-08-25T16:15:12.186Z"
+    },
+    {
+      "id": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "firstName": "Aïssata",
+      "lastName": "Diallo",
+      "email": "admin@cabcomptable.ml",
+      "phone": "+22370000001",
+      "passwordHash": "$2b$10$MHg/o6ZQ7QrdkfiXilYc4.GuQV9gu1p4.RQL2QtDEGlTHvFdjMV7q",
+      "role": "super_admin",
+      "emailVerified": true,
+      "status": "active",
+      "companyId": null,
+      "preferences": {
+        "emailNotifications": true
+      },
+      "createdAt": "2026-08-25T16:15:12.185Z",
+      "updatedAt": "2026-08-30T10:19:25.472Z"
+    },
+    {
+      "id": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "firstName": "Fatoumata",
+      "lastName": "Bathily",
+      "email": "client@demo.ml",
+      "phone": "+22370000011",
+      "passwordHash": "$2b$10$yycls6j/gIgbKiQSZWyuiObrFp1Jv8Hmn7Itg/yFwBomVXEbCC52S",
+      "role": "client",
+      "emailVerified": true,
+      "status": "active",
+      "companyId": "82918de0-8b16-454f-b970-c90bcdc54b17",
+      "preferences": {
+        "emailNotifications": true
+      },
+      "createdAt": "2026-08-25T16:15:12.187Z",
+      "updatedAt": "2026-08-25T19:32:17.967Z"
+    },
+    {
+      "id": "dd325ffc-1605-4c41-98cc-e14b143bf6c1",
+      "firstName": "Mahamadou",
+      "lastName": "Sidibé",
+      "email": "mahamadousidibe@gmail.com",
+      "phone": "+22370000000",
+      "passwordHash": "$2b$10$KK/86L71jyfcFZuGm2/tX.meUCkeA215mJaNqtfObP6MvRc0fKn3y",
+      "role": "client",
+      "emailVerified": false,
+      "status": "active",
+      "companyId": null,
+      "preferences": {
+        "emailNotifications": true
+      },
+      "createdAt": "2026-08-26T08:16:52.243Z",
+      "updatedAt": "2026-08-26T08:16:52.243Z"
+    },
+    {
+      "id": "e2d417da-f38e-4e89-9054-305246812a62",
+      "firstName": "Mahamadou",
+      "lastName": "Sidibé",
+      "email": "mahamadousidibe2004@gmail.com",
+      "phone": "0022372491257",
+      "passwordHash": "$2b$10$XhPLA2g6CBbVQ8PXrZ3TV.9k9Ibp4DencGNeF75UEHbV3hZjWFtni",
+      "role": "assistant",
+      "emailVerified": true,
+      "status": "active",
+      "companyId": null,
+      "preferences": {
+        "emailNotifications": true
+      },
+      "createdAt": "2026-08-25T19:35:54.114Z",
+      "updatedAt": "2026-08-30T12:54:15.690Z",
+      "resetToken": null,
+      "resetTokenAt": null
+    }
+  ],
+  "clients": [
+    {
+      "id": "72b64efb-4d9c-45bf-9e59-d27b4d177c51",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "companyId": "82918de0-8b16-454f-b970-c90bcdc54b17",
+      "assignedStaffId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "status": "active",
+      "createdAt": "2026-08-25T16:15:12.188Z",
+      "updatedAt": "2026-08-25T16:15:12.188Z"
+    },
+    {
+      "id": "8d02da10-8c73-4c0f-bc88-30545c27f982",
+      "userId": "dd325ffc-1605-4c41-98cc-e14b143bf6c1",
+      "companyId": null,
+      "assignedStaffId": null,
+      "status": "active",
+      "createdAt": "2026-08-26T08:17:02.543Z",
+      "updatedAt": "2026-08-26T08:17:02.543Z"
+    }
+  ],
+  "articles": [
+    {
+      "id": "05e4c93e-b9b5-4ae0-8e79-02960a620747",
+      "title": "Pourquoi centraliser vos documents comptables",
+      "slug": "centraliser-documents-comptables",
+      "summary": "Gagner du temps et sécuriser vos échanges avec le cabinet.",
+      "content": "WhatsApp et e-mails dispersent les pièces. Un portail unique permet de savoir ce qui a été fourni, ce qui manque et ce qui a été validé.",
+      "category": "Conseils",
+      "authorId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "authorName": "Moussa Traoré",
+      "imageUrl": "",
+      "status": "published",
+      "publishedAt": "2026-08-25T16:15:12.185Z",
+      "createdAt": "2026-08-25T16:15:12.438Z",
+      "updatedAt": "2026-08-25T16:15:12.438Z"
+    },
+    {
+      "id": "f1e33526-21e3-4c28-bf02-ecc366bd9f39",
+      "title": "Calendrier fiscal : anticiper vos échéances",
+      "slug": "calendrier-fiscal-anticipater",
+      "summary": "Les bonnes pratiques pour ne manquer aucune déclaration.",
+      "content": "Anticiper les échéances fiscales réduit les risques de pénalités. Dans votre espace client, les demandes de pièces et rappels vous aident à préparer chaque échéance à temps.",
+      "category": "Fiscalité",
+      "authorId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "authorName": "Aïssata Diallo",
+      "imageUrl": "",
+      "status": "published",
+      "publishedAt": "2026-08-25T16:15:12.185Z",
+      "createdAt": "2026-08-25T16:15:12.436Z",
+      "updatedAt": "2026-08-25T16:15:12.436Z"
+    },
+    {
+      "id": "5ab89c19-4f07-43a8-8e03-c3f94336b967",
+      "title": "Formation en Odoo",
+      "slug": "formation-en-odoo",
+      "summary": "Une formation en Odoo ",
+      "content": "-",
+      "category": "Formation",
+      "software": "Odoo",
+      "authorId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "authorName": "Mahamadou Sidibé",
+      "image": null,
+      "imageUrl": "/odoo.png",
+      "status": "published",
+      "publishedAt": "2026-08-30T13:25:25.277Z",
+      "createdAt": "2026-08-30T13:25:25.277Z",
+      "updatedAt": "2026-08-30T13:25:25.277Z"
+    }
+  ],
+  "inscriptions": [
+    {
+      "id": "81fe5f2c-a58d-47f7-ad27-af74cd22c4b8",
+      "firstName": "Alhassane ",
+      "lastName": "Diaby",
+      "email": "alhassanediaby@gmail.com",
+      "phone": "",
+      "articleId": "9003e6ac-8960-4b93-9114-1827558a69ba",
+      "articleTitle": "Formation sur Sage Comptabilité",
+      "articleSlug": "formation-sur-sage-comptabilite",
+      "status": "pending",
+      "createdAt": "2026-08-30T12:59:35.132Z",
+      "updatedAt": "2026-08-30T12:59:35.132Z"
+    },
+    {
+      "id": "dd401d7c-04bc-4dc7-927c-0989495e3994",
+      "firstName": "Mahamadou",
+      "lastName": "Sidibé",
+      "email": "mahamadousidibe2004@gmail.com",
+      "phone": "00224623841149",
+      "articleId": "933e029f-70ef-4133-9007-d6851dd7b50a",
+      "articleTitle": "Sage 100",
+      "articleSlug": "sage-100",
+      "status": "pending",
+      "createdAt": "2026-08-29T15:48:26.409Z",
+      "updatedAt": "2026-08-29T15:48:26.409Z"
+    }
+  ],
+  "conversations": [
+    {
+      "id": "a2e33265-68d5-4fe0-b5d1-f9d5201b0b36",
+      "subject": "Formation sur Sage 100",
+      "clientId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "companyId": "82918de0-8b16-454f-b970-c90bcdc54b17",
+      "dossierId": null,
+      "participantIds": [
+        "d1cf9138-238f-43ed-a2a4-b1fd0aca077a"
+      ],
+      "assigneeId": null,
+      "status": "open",
+      "lastMessageAt": "2026-08-25T19:43:17.886Z",
+      "createdAt": "2026-08-25T19:31:06.613Z",
+      "updatedAt": "2026-08-25T19:43:17.886Z"
+    },
+    {
+      "id": "d7e11424-7c82-489b-84f6-ebeb2fc5766d",
+      "subject": "Formation sur Sage 100",
+      "clientId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "companyId": "82918de0-8b16-454f-b970-c90bcdc54b17",
+      "dossierId": null,
+      "participantIds": [
+        "d1cf9138-238f-43ed-a2a4-b1fd0aca077a"
+      ],
+      "assigneeId": null,
+      "status": "open",
+      "lastMessageAt": "2026-08-25T19:31:10.228Z",
+      "createdAt": "2026-08-25T19:31:10.228Z",
+      "updatedAt": "2026-08-25T19:31:10.228Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "010d1771-a8c8-40c6-81ff-9224372e2d82",
+      "conversationId": "a2e33265-68d5-4fe0-b5d1-f9d5201b0b36",
+      "senderId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "content": "JE souhaite avoir une formation sur sage 100 comptabilité",
+      "attachments": [],
+      "readBy": [
+        "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+        "7fa56f3c-69a6-4cdc-8678-74422ac5f839"
+      ],
+      "createdAt": "2026-08-25T19:31:07.857Z",
+      "updatedAt": "2026-08-28T18:57:30.810Z"
+    },
+    {
+      "id": "3da7082b-2266-4eb5-8e29-af5782b021d8",
+      "conversationId": "a2e33265-68d5-4fe0-b5d1-f9d5201b0b36",
+      "senderId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "content": "D'accord je vous revendrai plus tard 🫡",
+      "attachments": [],
+      "readBy": [
+        "7fa56f3c-69a6-4cdc-8678-74422ac5f839"
+      ],
+      "createdAt": "2026-08-25T19:43:15.556Z",
+      "updatedAt": "2026-08-25T19:43:15.556Z"
+    },
+    {
+      "id": "a08ee28b-8546-4d01-be74-658d2d063ba8",
+      "conversationId": "d7e11424-7c82-489b-84f6-ebeb2fc5766d",
+      "senderId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "content": "JE souhaite avoir une formation sur sage 100 comptabilité",
+      "attachments": [],
+      "readBy": [
+        "d1cf9138-238f-43ed-a2a4-b1fd0aca077a"
+      ],
+      "createdAt": "2026-08-25T19:31:11.535Z",
+      "updatedAt": "2026-08-25T19:31:11.535Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "10621d32-fb58-48e1-8d77-f88ac4f92884",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "title": "Document accepté",
+      "content": "Mon premier dossier",
+      "category": "document",
+      "link": "/client/documents",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-26T14:58:50.404Z",
+      "updatedAt": "2026-08-26T14:58:50.404Z"
+    },
+    {
+      "id": "109a35ce-479c-405a-afd8-32c2c145ef0e",
+      "userId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "title": "Nouvelle demande de prestation",
+      "content": "Mahamadou Sidibé — jeflng,fdn,lg;qzme,mlkj,",
+      "category": "request",
+      "link": "/admin/demandes",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-26T13:23:16.555Z",
+      "updatedAt": "2026-08-26T13:23:16.555Z"
+    },
+    {
+      "id": "1c7978ba-cc59-4f9f-be17-842ca399bfb0",
+      "userId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "title": "🎓 Nouvelle inscription formation",
+      "content": "De : mahamadousidibe2004@gmail.com | Mahamadou Sidibé — Formation : Sage 100",
+      "category": "inscription",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "mahamadousidibe2004@gmail.com",
+        "senderName": "Mahamadou Sidibé",
+        "formationTitle": "Sage 100",
+        "articleId": "933e029f-70ef-4133-9007-d6851dd7b50a"
+      },
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-29T15:48:27.487Z",
+      "updatedAt": "2026-08-29T15:48:27.487Z"
+    },
+    {
+      "id": "3aa2a241-003d-49fe-bd39-bc9bb8bd1970",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "title": "Nouveau message",
+      "content": "D'accord je vous revendrai plus tard 🫡",
+      "category": "message",
+      "link": "/client/messages",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-25T19:43:19.651Z",
+      "updatedAt": "2026-08-25T19:43:19.651Z"
+    },
+    {
+      "id": "3c668a0f-938d-4817-a32d-3bb70f51a38c",
+      "userId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "title": "🎓 Nouvelle inscription formation",
+      "content": "De : alhassanediaby@gmail.com | Alhassane  Diaby — Formation : Formation sur Sage Comptabilité",
+      "category": "inscription",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "alhassanediaby@gmail.com",
+        "senderName": "Alhassane  Diaby",
+        "formationTitle": "Formation sur Sage Comptabilité",
+        "articleId": "9003e6ac-8960-4b93-9114-1827558a69ba"
+      },
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-30T12:59:35.998Z",
+      "updatedAt": "2026-08-30T12:59:35.998Z"
+    },
+    {
+      "id": "4167667a-3192-494c-a163-b3e3eaabe8c9",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "title": "Document accepté",
+      "content": "Mon premier dossier",
+      "category": "document",
+      "link": "/client/documents",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-25T19:37:37.703Z",
+      "updatedAt": "2026-08-25T19:37:37.703Z"
+    },
+    {
+      "id": "4ac205d1-a108-44fd-ae91-cffacf305f0d",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "title": "Nouvelle demande de prestation",
+      "content": "Mahamadou Sidibé — jeflng,fdn,lg;qzme,mlkj,",
+      "category": "request",
+      "link": "/admin/demandes",
+      "meta": {},
+      "read": true,
+      "readAt": "2026-08-30T13:27:08.262Z",
+      "createdAt": "2026-08-26T13:23:16.555Z",
+      "updatedAt": "2026-08-30T13:27:08.262Z"
+    },
+    {
+      "id": "4bbd415c-0add-4c81-973f-585cdb14b112",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "title": "Nouvelle demande académique",
+      "content": "Mahamadou Sidibé — sdfghjazertyuio",
+      "category": "request",
+      "link": "/admin/demandes",
+      "meta": {},
+      "read": true,
+      "readAt": "2026-08-30T13:27:07.304Z",
+      "createdAt": "2026-08-26T17:49:26.589Z",
+      "updatedAt": "2026-08-30T13:27:07.305Z"
+    },
+    {
+      "id": "57c02acc-5b93-4595-a51f-57c11c4d836f",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "title": "Nouveau message de contact",
+      "content": "De : mahamadousidibe2004@gmail.com | Mahamadou Sidibé — Objet : Suivi de formation",
+      "category": "contact",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "mahamadousidibe2004@gmail.com",
+        "senderName": "Mahamadou Sidibé",
+        "subject": "Suivi de formation"
+      },
+      "read": true,
+      "readAt": "2026-08-29T15:27:44.974Z",
+      "createdAt": "2026-08-29T15:11:22.422Z",
+      "updatedAt": "2026-08-29T15:27:44.974Z"
+    },
+    {
+      "id": "5d55aabb-0b1d-412a-9afb-9e00bbbc1840",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "title": "Document rejeté",
+      "content": "Mon premier dossier",
+      "category": "document",
+      "link": "/client/documents",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-26T14:58:48.487Z",
+      "updatedAt": "2026-08-26T14:58:48.487Z"
+    },
+    {
+      "id": "71d28ea2-e783-44c4-aa43-3103c2782ebb",
+      "userId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "title": "Nouveau message client",
+      "content": "JE souhaite avoir une formation sur sage 100 comptabilité",
+      "category": "message",
+      "link": "/admin/messages",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-25T19:31:09.202Z",
+      "updatedAt": "2026-08-25T19:31:09.202Z"
+    },
+    {
+      "id": "72223d28-2bb1-49bf-aafa-97539c2b49ab",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "title": "🎓 Nouvelle inscription formation",
+      "content": "De : mahamadousidibe2004@gmail.com | Mahamadou Sidibé — Formation : Sage 100",
+      "category": "inscription",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "mahamadousidibe2004@gmail.com",
+        "senderName": "Mahamadou Sidibé",
+        "formationTitle": "Sage 100",
+        "articleId": "933e029f-70ef-4133-9007-d6851dd7b50a"
+      },
+      "read": true,
+      "readAt": "2026-08-29T15:50:00.703Z",
+      "createdAt": "2026-08-29T15:48:27.487Z",
+      "updatedAt": "2026-08-29T15:50:00.703Z"
+    },
+    {
+      "id": "7c50a01d-74b9-4704-b867-0454b2bcb630",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "title": "🎓 Nouvelle inscription formation",
+      "content": "De : alhassanediaby@gmail.com | Alhassane  Diaby — Formation : Formation sur Sage Comptabilité",
+      "category": "inscription",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "alhassanediaby@gmail.com",
+        "senderName": "Alhassane  Diaby",
+        "formationTitle": "Formation sur Sage Comptabilité",
+        "articleId": "9003e6ac-8960-4b93-9114-1827558a69ba"
+      },
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-30T12:59:35.998Z",
+      "updatedAt": "2026-08-30T12:59:35.998Z"
+    },
+    {
+      "id": "7df2a732-f5f8-420d-ba6f-f3ecb13ae482",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "title": "Nouveau message de contact",
+      "content": "De : mahamadousidibe2004@gmail.com | Mahamadou Sidibé — Objet : Suivi de formation en Comptabilité",
+      "category": "contact",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "mahamadousidibe2004@gmail.com",
+        "senderName": "Mahamadou Sidibé",
+        "subject": "Suivi de formation en Comptabilité"
+      },
+      "read": true,
+      "readAt": "2026-08-29T15:45:34.201Z",
+      "createdAt": "2026-08-29T15:41:27.966Z",
+      "updatedAt": "2026-08-29T15:45:34.201Z"
+    },
+    {
+      "id": "8cf85124-4b83-44f6-9fab-221c0dfbf440",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "title": "Nouveau message de contact",
+      "content": "De : mahamadousidibe2004@gmail.com | Mahamadou Sidibé — Objet : Suivi de formation en Comptabilité Sage 100",
+      "category": "contact",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "mahamadousidibe2004@gmail.com",
+        "senderName": "Mahamadou Sidibé",
+        "subject": "Suivi de formation en Comptabilité Sage 100"
+      },
+      "read": true,
+      "readAt": "2026-08-30T10:17:23.531Z",
+      "createdAt": "2026-08-29T17:43:06.232Z",
+      "updatedAt": "2026-08-30T10:17:23.531Z"
+    },
+    {
+      "id": "9cdd8dd3-1deb-4d6b-a0e1-2fc3b039ea54",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "title": "🎓 Nouvelle inscription formation",
+      "content": "De : alhassanediaby@gmail.com | Alhassane  Diaby — Formation : Formation sur Sage Comptabilité",
+      "category": "inscription",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "alhassanediaby@gmail.com",
+        "senderName": "Alhassane  Diaby",
+        "formationTitle": "Formation sur Sage Comptabilité",
+        "articleId": "9003e6ac-8960-4b93-9114-1827558a69ba"
+      },
+      "read": true,
+      "readAt": "2026-08-30T13:23:49.386Z",
+      "createdAt": "2026-08-30T12:59:35.998Z",
+      "updatedAt": "2026-08-30T13:23:49.387Z"
+    },
+    {
+      "id": "aed35d66-545c-4beb-91fa-958106fd5249",
+      "userId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "title": "Nouveau message client",
+      "content": "JE souhaite avoir une formation sur sage 100 comptabilité",
+      "category": "message",
+      "link": "/admin/messages",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-25T19:31:12.393Z",
+      "updatedAt": "2026-08-25T19:31:12.393Z"
+    },
+    {
+      "id": "c2aaa296-52bc-4e89-b024-390c839dab50",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "title": "Réinitialisation de mot de passe",
+      "content": "Une demande de réinitialisation a été enregistrée. Contactez le cabinet si ce n’était pas vous.",
+      "category": "security",
+      "link": "",
+      "meta": {},
+      "read": true,
+      "readAt": "2026-08-30T12:55:24.713Z",
+      "createdAt": "2026-08-30T12:27:21.716Z",
+      "updatedAt": "2026-08-30T12:55:24.713Z"
+    },
+    {
+      "id": "c48887ab-1315-486b-9d0a-c50cf0a8b5d3",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "title": "Réinitialisation de mot de passe",
+      "content": "Une demande de réinitialisation a été enregistrée. Contactez le cabinet si ce n’était pas vous.",
+      "category": "security",
+      "link": "",
+      "meta": {},
+      "read": true,
+      "readAt": "2026-08-30T12:55:15.187Z",
+      "createdAt": "2026-08-30T12:53:02.280Z",
+      "updatedAt": "2026-08-30T12:55:15.187Z"
+    },
+    {
+      "id": "cdcfce03-3023-4608-88bf-0731452986e8",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "title": "🎓 Nouvelle inscription formation",
+      "content": "De : mahamadousidibe2004@gmail.com | Mahamadou Sidibé — Formation : Sage 100",
+      "category": "inscription",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "mahamadousidibe2004@gmail.com",
+        "senderName": "Mahamadou Sidibé",
+        "formationTitle": "Sage 100",
+        "articleId": "933e029f-70ef-4133-9007-d6851dd7b50a"
+      },
+      "read": true,
+      "readAt": "2026-08-30T12:55:25.848Z",
+      "createdAt": "2026-08-29T15:48:27.487Z",
+      "updatedAt": "2026-08-30T12:55:25.848Z"
+    },
+    {
+      "id": "d9c3ac6d-89ab-44ef-8d96-c6199e035caf",
+      "userId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "title": "Nouvelle demande académique",
+      "content": "Mahamadou Sidibé — sdfghjazertyuio",
+      "category": "request",
+      "link": "/admin/demandes",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-26T17:49:26.589Z",
+      "updatedAt": "2026-08-26T17:49:26.589Z"
+    },
+    {
+      "id": "ee6a3922-5565-449f-be15-16e5f57d68bc",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "title": "Document rejeté",
+      "content": "Mon premier dossier",
+      "category": "document",
+      "link": "/client/documents",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-26T14:58:53.674Z",
+      "updatedAt": "2026-08-26T14:58:53.674Z"
+    },
+    {
+      "id": "f47c9e5f-3853-48f6-9431-2001f8df3d02",
+      "userId": "1dbb583d-3b38-4381-b0f5-c782f36bf873",
+      "title": "Document reçu",
+      "content": "Mon premier dossier",
+      "category": "document",
+      "link": "/admin/dossiers/0595dc19-cc7b-4945-b066-0422f50b969e",
+      "meta": {},
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-25T19:29:27.898Z",
+      "updatedAt": "2026-08-25T19:29:27.898Z"
+    },
+    {
+      "id": "fddecb57-b640-47f9-a0f1-b091da05217e",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "title": "Réinitialisation de mot de passe",
+      "content": "Une demande de réinitialisation a été enregistrée. Contactez le cabinet si ce n’était pas vous.",
+      "category": "security",
+      "link": "",
+      "meta": {},
+      "read": true,
+      "readAt": "2026-08-30T12:55:21.086Z",
+      "createdAt": "2026-08-30T12:37:12.612Z",
+      "updatedAt": "2026-08-30T12:55:21.086Z"
+    },
+    {
+      "id": "0bc109c0-e8d4-4853-b665-99bdfd556cef",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "title": "Nouveau message de contact",
+      "content": "De : mahamadousidibe2004@gmail.com | Mahamadou Sidibé — Objet : Suivi de formation en Comptabilité Sage 100 et Odoo",
+      "category": "contact",
+      "link": "/admin/notifications",
+      "meta": {
+        "senderEmail": "mahamadousidibe2004@gmail.com",
+        "senderName": "Mahamadou Sidibé",
+        "subject": "Suivi de formation en Comptabilité Sage 100 et Odoo"
+      },
+      "read": false,
+      "readAt": null,
+      "createdAt": "2026-08-30T13:21:39.459Z",
+      "updatedAt": "2026-08-30T13:21:39.459Z"
+    }
+  ],
+  "activity_logs": [
+    {
+      "id": "2d9279d4-478f-4b44-9224-793eba81cb27",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T18:30:56.100Z",
+      "createdAt": "2026-08-26T18:30:56.100Z",
+      "updatedAt": "2026-08-26T18:30:56.100Z"
+    },
+    {
+      "id": "308d449a-3aaa-462a-8655-70f45a4dae4b",
+      "userId": "dd325ffc-1605-4c41-98cc-e14b143bf6c1",
+      "action": "register",
+      "objectType": "user",
+      "objectId": "dd325ffc-1605-4c41-98cc-e14b143bf6c1",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T08:17:06.651Z",
+      "createdAt": "2026-08-26T08:17:06.651Z",
+      "updatedAt": "2026-08-26T08:17:06.651Z"
+    },
+    {
+      "id": "47860950-968c-4903-ae84-7ea548ec52ce",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T14:50:04.746Z",
+      "createdAt": "2026-08-26T14:50:04.746Z",
+      "updatedAt": "2026-08-26T14:50:04.746Z"
+    },
+    {
+      "id": "5323987d-0037-4cc6-bb97-1665ac3784a0",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-25T19:26:10.470Z",
+      "createdAt": "2026-08-25T19:26:10.470Z",
+      "updatedAt": "2026-08-25T19:26:10.470Z"
+    },
+    {
+      "id": "5a154fd3-01d5-4bc1-ae8c-34eebdf93b77",
+      "userId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "e2d417da-f38e-4e89-9054-305246812a62",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-30T12:54:57.278Z",
+      "createdAt": "2026-08-30T12:54:57.278Z",
+      "updatedAt": "2026-08-30T12:54:57.278Z"
+    },
+    {
+      "id": "62d8597d-ec7c-4d5d-a8a1-d88628ca1b61",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "update_document_status",
+      "objectType": "document",
+      "objectId": "262c6e72-d1b5-4465-9b42-493f8c2ee5a2",
+      "result": "success",
+      "meta": {
+        "status": "accepted"
+      },
+      "ip": "::1",
+      "at": "2026-08-25T19:37:38.426Z",
+      "createdAt": "2026-08-25T19:37:38.426Z",
+      "updatedAt": "2026-08-25T19:37:38.426Z"
+    },
+    {
+      "id": "65410173-b4c6-4ac4-9cab-aee693e57474",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "update_document_status",
+      "objectType": "document",
+      "objectId": "262c6e72-d1b5-4465-9b42-493f8c2ee5a2",
+      "result": "success",
+      "meta": {
+        "status": "accepted"
+      },
+      "ip": "::1",
+      "at": "2026-08-26T14:58:55.071Z",
+      "createdAt": "2026-08-26T14:58:55.071Z",
+      "updatedAt": "2026-08-26T14:58:55.071Z"
+    },
+    {
+      "id": "6762c777-f939-4fcf-a32f-9bfa311ffd3d",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "update_document_status",
+      "objectType": "document",
+      "objectId": "262c6e72-d1b5-4465-9b42-493f8c2ee5a2",
+      "result": "success",
+      "meta": {
+        "status": "rejected"
+      },
+      "ip": "::1",
+      "at": "2026-08-26T14:58:51.749Z",
+      "createdAt": "2026-08-26T14:58:51.749Z",
+      "updatedAt": "2026-08-26T14:58:51.749Z"
+    },
+    {
+      "id": "6b8646a3-dfe5-4bbe-9a5d-21331661bfbe",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T17:44:35.680Z",
+      "createdAt": "2026-08-26T17:44:35.681Z",
+      "updatedAt": "2026-08-26T17:44:35.681Z"
+    },
+    {
+      "id": "716a136d-a057-4239-8946-8c2d0fa8b8bd",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T17:53:46.238Z",
+      "createdAt": "2026-08-26T17:53:46.238Z",
+      "updatedAt": "2026-08-26T17:53:46.238Z"
+    },
+    {
+      "id": "770fc9bf-c7d2-4961-8d94-a96c415254ac",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "action": "upload_document",
+      "objectType": "document",
+      "objectId": "262c6e72-d1b5-4465-9b42-493f8c2ee5a2",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-25T19:29:26.143Z",
+      "createdAt": "2026-08-25T19:29:26.143Z",
+      "updatedAt": "2026-08-25T19:29:26.143Z"
+    },
+    {
+      "id": "792db7b7-fdef-4a82-bb44-56cd4e175b17",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-25T19:32:47.670Z",
+      "createdAt": "2026-08-25T19:32:47.671Z",
+      "updatedAt": "2026-08-25T19:32:47.671Z"
+    },
+    {
+      "id": "b79f797c-28ba-43df-b74b-ffec702538d4",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "update_document_status",
+      "objectType": "document",
+      "objectId": "262c6e72-d1b5-4465-9b42-493f8c2ee5a2",
+      "result": "success",
+      "meta": {
+        "status": "rejected"
+      },
+      "ip": "::1",
+      "at": "2026-08-26T14:58:57.849Z",
+      "createdAt": "2026-08-26T14:58:57.849Z",
+      "updatedAt": "2026-08-26T14:58:57.849Z"
+    },
+    {
+      "id": "bb1d239d-71bf-4b22-94bf-4a5069c51727",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "action": "update_profile",
+      "objectType": "user",
+      "objectId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-25T19:32:18.944Z",
+      "createdAt": "2026-08-25T19:32:18.944Z",
+      "updatedAt": "2026-08-25T19:32:18.944Z"
+    },
+    {
+      "id": "cd19751f-392a-428a-a7e5-dd6f32848191",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T18:31:39.749Z",
+      "createdAt": "2026-08-26T18:31:39.749Z",
+      "updatedAt": "2026-08-26T18:31:39.749Z"
+    },
+    {
+      "id": "dbd5a8fc-da4f-46cb-84c8-d11887ec1a77",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T08:30:42.640Z",
+      "createdAt": "2026-08-26T08:30:42.640Z",
+      "updatedAt": "2026-08-26T08:30:42.640Z"
+    },
+    {
+      "id": "dbe9a107-e752-468e-8342-051421064300",
+      "userId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "d1cf9138-238f-43ed-a2a4-b1fd0aca077a",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-25T16:17:23.788Z",
+      "createdAt": "2026-08-25T16:17:23.788Z",
+      "updatedAt": "2026-08-25T16:17:23.788Z"
+    },
+    {
+      "id": "de8d62a2-f0d0-4e90-a6b1-820848e756a5",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T16:40:44.279Z",
+      "createdAt": "2026-08-26T16:40:44.279Z",
+      "updatedAt": "2026-08-26T16:40:44.279Z"
+    },
+    {
+      "id": "e3e968f8-d75c-4cbe-9220-14b5f07bc4df",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-26T18:30:44.112Z",
+      "createdAt": "2026-08-26T18:30:44.112Z",
+      "updatedAt": "2026-08-26T18:30:44.112Z"
+    },
+    {
+      "id": "ec8e0edf-1015-4364-9d8d-d226a4476938",
+      "userId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "action": "login",
+      "objectType": "user",
+      "objectId": "7fa56f3c-69a6-4cdc-8678-74422ac5f839",
+      "result": "success",
+      "meta": {},
+      "ip": "::1",
+      "at": "2026-08-25T20:00:59.764Z",
+      "createdAt": "2026-08-25T20:00:59.764Z",
+      "updatedAt": "2026-08-25T20:00:59.764Z"
+    }
+  ],
+  "settings": [
+    {
+      "id": "main",
+      "cabinetName": "Cabinet Comptable",
+      "tagline": "Votre partenaire de confiance pour la formation et le suivi de mémoire",
+      "phone": "+223 76 92 80 12",
+      "email": "mahamadousidibe2004@gmail.com",
+      "whatsapp": "+22376928012",
+      "address": "Kalaban Coura, Bamako, Mali",
+      "hours": "Ouvert 24H/24",
+      "createdAt": "2026-08-25T16:15:12.027Z",
+      "updatedAt": "2026-08-30T10:19:44.638Z"
+    }
+  ],
+  "service_requests": [],
+  "contact_messages": [
+    {
+      "id": "4a929b6d-c860-4a16-9753-1ec8abeb4d56",
+      "firstName": "Mahamadou",
+      "lastName": "Sidibé",
+      "company": "Comptable",
+      "email": "mahamadousidibe2004@gmail.com",
+      "subject": "Suivi de formation en Comptabilité",
+      "message": "Suivi de formation en Comptabilité",
+      "status": "new",
+      "consent": true,
+      "attachment": null,
+      "createdAt": "2026-08-29T15:41:26.956Z",
+      "updatedAt": "2026-08-29T15:41:26.956Z"
+    },
+    {
+      "id": "5ddcc4b3-7338-4c81-ab60-afb183e6d8b6",
+      "firstName": "Mahamadou",
+      "lastName": "Sidibé",
+      "company": "Cabinet Comptable ",
+      "email": "mahamadousidibe2004@gmail.com",
+      "subject": "Suivi de formation en Comptabilité Sage 100",
+      "message": "Suivi de formation en Comptabilité Sage 100",
+      "status": "new",
+      "consent": true,
+      "attachment": null,
+      "createdAt": "2026-08-29T17:43:03.828Z",
+      "updatedAt": "2026-08-29T17:43:03.828Z"
+    },
+    {
+      "id": "b740e416-e18a-4e3a-82d6-baeb666a9f6f",
+      "firstName": "Mahamadou",
+      "lastName": "Sidibé",
+      "company": "Cabinet Comptable ",
+      "email": "mahamadousidibe2004@gmail.com",
+      "subject": "Suivi de formation",
+      "message": "Suivi de formation",
+      "status": "new",
+      "consent": true,
+      "attachment": null,
+      "createdAt": "2026-08-29T15:11:19.976Z",
+      "updatedAt": "2026-08-29T15:11:19.976Z"
+    },
+    {
+      "id": "fa221ab2-6a9b-4fa9-a7e3-022d20f69ea5",
+      "firstName": "Mahamadou",
+      "lastName": "Sidibé",
+      "company": "Comptable SA",
+      "email": "mahamadousidibe2004@gmail.com",
+      "subject": "Suivi de formation en Comptabilité Sage 100 et Odoo",
+      "message": "Suivi de formation en Comptabilité Sage 100 et Odoo",
+      "status": "new",
+      "consent": true,
+      "attachment": null,
+      "createdAt": "2026-08-30T13:21:37.627Z",
+      "updatedAt": "2026-08-30T13:21:37.627Z"
+    }
+  ]
+}
