@@ -8,10 +8,11 @@ const crypto = require('crypto');
 const { sendPasswordResetEmail } = require('../services/email');
 
 function setSessionCookie(res, token) {
+  const isProd = process.env.NODE_ENV === 'production';
   res.cookie('cab_token', token, {
     httpOnly: true,
-    sameSite: 'lax',
-    secure: process.env.NODE_ENV === 'production',
+    sameSite: isProd ? 'none' : 'lax',
+    secure: isProd,
     maxAge: 7 * 24 * 60 * 60 * 1000,
     path: '/',
   });
