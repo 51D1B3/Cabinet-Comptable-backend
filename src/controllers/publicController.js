@@ -5,6 +5,14 @@ const { sanitizeUser, STAFF_ROLES } = require('../middlewares/auth');
 const { uploadFile } = require('../services/supabaseStorage');
 const { sendContactNotification, sendContactAutoReply, sendAcademicRequestEmails } = require('../services/email');
 
+function runInBackground(task, label) {
+  setImmediate(() => {
+    Promise.resolve()
+      .then(task)
+      .catch((error) => console.error(`${label}:`, error.message));
+  });
+}
+
 const SERVICES = [
   { id: 'comptabilite', slug: 'comptabilite', name: 'Comptabilité', category: 'Comptabilité', description: 'Tenue comptable, bilans et états financiers adaptés à votre activité.', objectives: ['Fiabiliser les comptes', 'Respecter les échéances'], problems: ['Retards de saisie', 'Manque de visibilité'], advantages: ['Reporting clair', 'Suivi personnalisé'], process: ['Diagnostic', 'Mise en place', 'Suivi mensuel'] },
   { id: 'gestion-pilotage', slug: 'gestion-pilotage', name: 'Gestion & pilotage', category: 'Gestion', description: 'Des tableaux de bord utiles pour piloter votre entreprise avec confiance.', objectives: ['Suivre la performance', 'Anticiper la trésorerie'], problems: ['Décisions sans indicateurs', 'Prévisions incertaines'], advantages: ['Indicateurs adaptés', 'Alertes utiles'], process: ['Analyse', 'Paramétrage', 'Points réguliers'] },
@@ -67,32 +75,28 @@ exports.createContact = asyncHandler(async (req, res) => {
     attachment,
   });
 
-  const admins = store.findAll('users', (u) => ['admin', 'super_admin', 'director'].includes(u.role));
-  await Promise.all(
-    admins.map((admin) =>
-      createNotification({
-        userId: admin.id,
-        title: 'Nouveau message de contact',
-        content: `De : ${email} | ${firstName} ${lastName} — Objet : ${subject || 'Contact'}`,
-        category: 'contact',
-        link: '/admin/notifications',
-        meta: { senderEmail: email, senderName: `${firstName} ${lastName}`, subject: subject || 'Contact' },
-      })
-    )
-  );
+  runInBackground(async () => {
+    const admins = store.findAll('users', (u) => ['admin', 'super_admin', 'director'].includes(u.role));
+    await Promise.all(
+      admins.map((admin) =>
+        createNotification({
+          userId: admin.id,
+          title: 'Nouveau message de contact',
+          content: `De : ${email} | ${firstName} ${lastName} — Objet : ${subject || 'Contact'}`,
+          category: 'contact',
+          link: '/admin/notifications',
+          meta: { senderEmail: email, senderName: `${firstName} ${lastName}`, subject: subject || 'Contact' },
+        })
+      )
+    );
+  }, 'Notifications contact non enregistrées');
 
-  let emailSent = true;
-  try {
-    await Promise.all([
+  runInBackground(() => Promise.all([
       sendContactNotification({ firstName, lastName, email, company, subject, message: item.message, type }),
       sendContactAutoReply({ to: email, firstName, type }),
-    ]);
-  } catch (error) {
-    emailSent = false;
-    console.error('E-mail contact non envoyé:', error.message);
-  }
+    ]), 'E-mails contact non envoyés');
 
-  res.status(201).json({ success: true, data: item, emailSent });
+  res.status(201).json({ success: true, data: item, emailQueued: true });
 });
 
 /* ── Demandes de service / devis / académique ── */
@@ -117,32 +121,34 @@ exports.createServiceRequest = asyncHandler(async (req, res) => {
     attachment,
   });
 
-  const staff = store.findAll('users', (u) => STAFF_ROLES.includes(u.role));
-  await Promise.all(
-    staff.map((s) =>
-      createNotification({
-        userId: s.id,
-        title: type === 'quote' ? 'Nouvelle demande de devis' : type === 'academic' ? 'Nouvelle demande académique' : 'Nouvelle demande de prestation',
-        content: `De : ${email} | ${firstName} ${lastName} — ${need.slice(0, 80)}`,
-        category: 'request',
-        link: '/admin/notifications',
-        meta: { senderEmail: email, senderName: `${firstName} ${lastName}`, type },
-      })
-    )
-  );
+  runInBackground(async () => {
+    const staff = store.findAll('users', (u) => STAFF_ROLES.includes(u.role));
+    await Promise.all(
+      staff.map((s) =>
+        createNotification({
+          userId: s.id,
+          title: type === 'quote' ? 'Nouvelle demande de devis' : type === 'academic' ? 'Nouvelle demande académique' : 'Nouvelle demande de prestation',
+          content: `De : ${email} | ${firstName} ${lastName} — ${need.slice(0, 80)}`,
+          category: 'request',
+          link: '/admin/notifications',
+          meta: { senderEmail: email, senderName: `${firstName} ${lastName}`, type },
+        })
+      )
+    );
+  }, 'Notifications de demande non enregistrées');
 
   if (type === 'academic') {
-    await sendAcademicRequestEmails({
+    runInBackground(() => sendAcademicRequestEmails({
       to: email,
       firstName,
       lastName,
       email,
       company,
       need,
-    });
+    }), 'E-mails de demande académique non envoyés');
   }
 
-  res.status(201).json({ success: true, data: item });
+  res.status(201).json({ success: true, data: item, emailQueued: type === 'academic' });
 });
 
 exports.getMyRequests = asyncHandler(async (req, res) => {
