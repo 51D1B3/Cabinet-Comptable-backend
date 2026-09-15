@@ -123,4 +123,26 @@ async function sendAcademicRequestEmails({ to, firstName, lastName, email, compa
   });
 }
 
-module.exports = { sendPasswordResetEmail, sendContactNotification, sendContactAutoReply, sendAcademicRequestEmails };
+async function sendServiceRequestAutoReply({ to, firstName, type = 'service' }) {
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER;
+  const labels = {
+    quote: 'demande de devis',
+    service: 'demande de prestation',
+  };
+  const label = labels[type] || labels.service;
+  await getTransporter().sendMail({
+    from,
+    to,
+    subject: `Votre ${label} a bien été reçue`,
+    text: `Bonjour ${firstName},\n\nNous avons bien reçu votre ${label}. Notre équipe va l'étudier et vous répondra sous 24 heures.\n\nMerci pour votre confiance.\n\nL'équipe du Cabinet Comptable`,
+    html: `<p>Bonjour ${firstName},</p><p>Nous avons bien reçu votre ${label}. Notre équipe va l'étudier et vous répondra sous 24 heures.</p><p>Merci pour votre confiance.</p><p>L'équipe du Cabinet Comptable</p>`,
+  });
+}
+
+module.exports = {
+  sendPasswordResetEmail,
+  sendContactNotification,
+  sendContactAutoReply,
+  sendAcademicRequestEmails,
+  sendServiceRequestAutoReply,
+};

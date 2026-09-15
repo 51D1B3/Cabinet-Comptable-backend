@@ -3,7 +3,7 @@ const { asyncHandler } = require('../middlewares/errorHandler');
 const { logActivity, createNotification } = require('../services/activity');
 const { sanitizeUser, STAFF_ROLES } = require('../middlewares/auth');
 const { uploadFile } = require('../services/supabaseStorage');
-const { sendContactNotification, sendContactAutoReply, sendAcademicRequestEmails } = require('../services/email');
+const { sendContactNotification, sendContactAutoReply, sendAcademicRequestEmails, sendServiceRequestAutoReply } = require('../services/email');
 
 function runInBackground(task, label) {
   setImmediate(() => {
@@ -146,9 +146,14 @@ exports.createServiceRequest = asyncHandler(async (req, res) => {
       company,
       need,
     }), 'E-mails de demande académique non envoyés');
+  } else {
+    runInBackground(
+      () => sendServiceRequestAutoReply({ to: email, firstName, type }),
+      'E-mail de confirmation de demande non envoyé'
+    );
   }
 
-  res.status(201).json({ success: true, data: item, emailQueued: type === 'academic' });
+  res.status(201).json({ success: true, data: item, emailQueued: true });
 });
 
 exports.getMyRequests = asyncHandler(async (req, res) => {
